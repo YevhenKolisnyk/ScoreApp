@@ -1,0 +1,30 @@
+﻿<Window x:Class="ScoreApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScoreApp"
+        mc:Ignorable="d"
+        Title="Score App" Height="600" Width="800">
+    <Grid Margin="0,0,2,5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="256*"/>
+            <ColumnDefinition Width="261*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="Result" TextAlignment="Center" Margin="71,369,78,100" Text="..." FontSize="24" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TeamName1" TextChanged="TeamName1_TextChanged"  HorizontalAlignment="Left" Height="44" Margin="29,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" FontSize="20"/>
+        <Label Content="Team 1" HorizontalAlignment="Left" Margin="29,25,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Score1" HorizontalAlignment="Left" Margin="101,180,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="44" Width="53" FontSize="32"/>
+        <Button x:Name="Plus1" Content="+" FontSize="32" HorizontalAlignment="Left" Margin="154,180,0,0" VerticalAlignment="Top" Width="55" Height="44" Click="Plus1_Click"/>
+        <Button x:Name="Minus1" Content="-" FontSize="32" HorizontalAlignment="Left" Margin="29,180,0,0" VerticalAlignment="Top" Width="55" Height="44" RenderTransformOrigin="4.396,0.5" Click="Minus1_Click"/>
+        <Button x:Name="Select1" Content="..." FontSize="24" HorizontalAlignment="Left" Margin="284,66,0,0" VerticalAlignment="Top" Width="73" Height="45" Click="Select1_Click"/>
+        <Button x:Name="Reset" Content="Reset" HorizontalAlignment="Left" Margin="347,267,0,0" VerticalAlignment="Top" Width="155" FontSize="32" Grid.ColumnSpan="2" Click="Reset_Click"/>
+        <TextBox x:Name="TeamName2" TextChanged="TeamName2_TextChanged" HorizontalAlignment="Left" Height="44" Margin="56,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" FontSize="20" Grid.Column="1"/>
+        <Label Content="Team 2" HorizontalAlignment="Left" Margin="56,25,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBlock x:Name="Score2" HorizontalAlignment="Left" Margin="128,180,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="44" Width="53" FontSize="32" Grid.Column="1"/>
+        <Button x:Name="Plus2" Content="+" FontSize="32" HorizontalAlignment="Left" Margin="181,180,0,0" VerticalAlignment="Top" Width="55" Height="44" Grid.Column="1" Click="Plus2_Click"/>
+        <Button x:Name="Minus2" Content="-" FontSize="32" HorizontalAlignment="Left" Margin="56,180,0,0" VerticalAlignment="Top" Width="55" Height="44" RenderTransformOrigin="4.396,0.5" Grid.Column="1" Click="Minus2_Click"/>
+        <Button x:Name="Select2" Content="..." FontSize="24" HorizontalAlignment="Left" Margin="311,66,0,0" VerticalAlignment="Top" Width="73" Height="45" Grid.Column="1" Click="Select2_Click" RenderTransformOrigin="1,0.6"/>
+
+    </Grid>
+</Window>
