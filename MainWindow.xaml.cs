@@ -27,7 +27,7 @@ namespace ScoreApp
                     this.Result.Text = string.Format("{0} {1}:{2} {3}", this.TeamName1.Text, this.Score1.Text, this.Score2.Text, this.TeamName2.Text);
 
                 string path = ConfigurationManager.AppSettings["scores_path"].ToString();
-                File.WriteAllText(path + "scores.txt", this.Result.Text);
+                File.WriteAllText(path + "scores.txt", this.Result.Text, Encoding.Default);
             }
             catch(Exception e)
             {
@@ -105,7 +105,7 @@ namespace ScoreApp
             string path = ConfigurationManager.AppSettings["scores_path"].ToString();
             if (string.IsNullOrEmpty(path) || Directory.Exists(path))
             {
-                var teamList = File.ReadAllLines(path + "teams.txt", Encoding.UTF7);
+                var teamList = File.ReadAllLines(path + "teams.txt", Encoding.Default);
                 foreach (string team in teamList)
                 {
                     var button = new Button();
